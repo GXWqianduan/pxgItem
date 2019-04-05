@@ -1,0 +1,85 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.pxg_header {
+  width: 100%;
+  height: 45px;
+  padding: 4px;
+  background-color: #eee;
+}
+.pxg_main {
+  width: 100%;
+  flex: 1;
+  overflow: scroll;
+}
+.pxg_main .pxg_banner .mui-slider-group .mui-slider-item img {
+  width: 100%;
+}
+.pxg_main .pxg_nav {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+}
+.pxg_main .pxg_nav > a {
+  width: 25%;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+}
+.pxg_main .pxg_nav > a > img {
+  transform: translate(50%);
+  width: 50%;
+  display: block;
+}
+.pxg_main .pxg_pro {
+  padding: 10px;
+}
+.pxg_main .pxg_pro .pxg_box {
+  width: 100%;
+}
+.pxg_main .pxg_pro .pxg_box > img {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.pxg_main .pxg_pro .pxg_box .pro_box {
+  background-color: #fff;
+  width: 49%;
+  height: 425px;
+  margin-bottom: 7px;
+  float: left;
+  font-size: 14px;
+}
+.pxg_main .pxg_pro .pxg_box .pro_box img {
+  width: 100%;
+  display: inline-block;
+}
+.pxg_main .pxg_pro .pxg_box .pro_box .pro_desc {
+  color: #333;
+  margin: 5px 0;
+}
+.pxg_main .pxg_pro .pxg_box .pro_box .pro_price {
+  color: #f00;
+}
+.pxg_main .pxg_pro .pxg_box .pro_box .pro-btn {
+  width: 80%;
+  display: block;
+  margin: 5px auto;
+}
+.pxg_main .pxg_pro .pxg_box .pro_box:nth-of-type(even) {
+  margin-left: 2%;
+}
+.pxg_footer {
+  width: 100%;
+  height: 45px;
+  background-color: red;
+}
+.pxg_footer .pxg_cat {
+  font-size: 12px;
+}
