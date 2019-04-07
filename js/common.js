@@ -7,9 +7,15 @@ $(function () {
    })
   // zepto导航拦截器
  $.ajaxSettings.beforeSend = function (xhr, obj) {
-    const baseURL = 'http://157.122.54.189:9094/api/public/v1/';
-    console.log(obj);
+    const baseURL = 'http://140.143.222.79:8899/api/public/v1/';
+   //  console.log(obj);
+   // 添加遮罩
+   //  $('body').addClass('loadding')
     obj.url = baseURL+obj.url;
  }
+ $.ajaxSettings.complete=function () {
+   //  console.log(1111);
+    $('body').removeClass('loadding');
 
+ }
 })

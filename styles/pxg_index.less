@@ -1,24 +1,9 @@
-.layout {
-  width: 100vw;
-  height: 100vh;
-  max-width: 640px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
+@import '../styles/reset';
+@import '../styles/common.less';
 
-.pxg_header {
-  width: 100%;
-  height: 45px;
-  padding: 4px;
-  background-color: #eee;
-}
-
+// 主页主体样式
 .pxg_main {
-  width: 100%;
-  flex: 1;
-  overflow: scroll;
-
+// 主页轮播样式
   .pxg_banner {
     .mui-slider-group {
       .mui-slider-item {
@@ -28,7 +13,7 @@
       }
     }
   }
-
+// 主页导航样式
   .pxg_nav {
     padding: 15px;
     width: 100%;
@@ -48,7 +33,7 @@
       }
     }
   }
-
+// 主页产品样式
   .pxg_pro {
     padding: 10px;
 
@@ -95,14 +80,4 @@
     }
   }
 
-}
-
-.pxg_footer {
-  width: 100%;
-  height: 45px;
-  background-color: red;
-
-  .pxg_cat {
-    font-size: 12px;
-  }
 }
