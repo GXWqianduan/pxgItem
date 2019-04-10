@@ -152,49 +152,82 @@ ul {
   z-index: 101;
   animation: fa-spin 1s infinite linear;
 }
-.pxg_main #header {
-  background-color: #0094ff;
-}
-.pxg_main #header > a {
-  color: #fff;
-  font-weight: bold;
-}
-.pxg_main .goodslist > li {
+.layout .pxg_main {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
   background-color: #fff;
-  margin-bottom: 5px;
 }
-.pxg_main .goodslist > li > a {
+.layout .pxg_main .mui-scroll-wrapper {
+  top: 44px;
+}
+.layout .pxg_main .details {
+  width: 100%;
+  padding: 6px;
+}
+.layout .pxg_main .details > p {
+  font-size: 14px;
+  color: #333;
+}
+.layout .pxg_main .details > em {
+  display: inline-block;
+  padding-top: 10px;
+  font-size: 20px;
+  color: red;
+}
+.layout .pxg_main .details > ul li {
   display: flex;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
 }
-.pxg_main .goodslist > li > a > div:nth-of-type(1) {
-  width: 45%;
+.layout .pxg_main .details > ul li > em {
+  font-size: 14px;
 }
-.pxg_main .goodslist > li > a > div:nth-of-type(1) > img {
-  width: 70%;
-  margin: 0 auto;
-  display: block;
-}
-.pxg_main .goodslist > li > a > div:nth-of-type(2) {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-right: 5px;
-}
-.pxg_main .mui-scroll .searchBox {
-  display: flex;
-}
-.pxg_main .mui-scroll .searchBox .query_txt {
-  width: 80%;
-  margin-bottom: 0;
-}
-.pxg_main .mui-scroll .searchBox .query_btn {
-  background-color: #0094ff;
-  color: #fff;
+.layout .pxg_main .details > ul li > em:nth-of-type(1) {
+  color: #aaa;
   flex: 1;
 }
-.pxg_main .mui-scroll .searchList > a {
-  display: block;
-  padding: 3px 0;
+.layout .pxg_main .details > ul li > em:nth-of-type(2) {
+  flex: 5;
+}
+.layout .pxg_main .tab_bar #item2 li {
+  color: #aaa;
+  padding: 0 10px;
+}
+.layout .pxg_main .tab_bar #item2 li h4 {
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+  line-height: 40px;
+}
+.layout .pxg_main .tab_bar #item2 li strong {
+  line-height: 30px;
+  font-size: 13px;
+}
+.layout .pxg_footer {
+  width: 100%;
+  height: 45px;
+}
+.layout .pxg_footer .mui-bar .mui-tab-item > span:nth-child(2) {
+  font-size: 13px;
+}
+.layout .pxg_footer a:nth-of-type(-n+3) {
+  border-right: 1px solid #999;
+}
+.layout .pxg_footer a:nth-of-type(3) > input {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
   color: #fff;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+.layout .pxg_footer a:nth-of-type(4) > input {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }

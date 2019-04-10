@@ -1,4 +1,5 @@
 $(function () {
+  
 // console.log(window.localStorage);
   // console.log(window.location.search);
 
@@ -9,7 +10,7 @@ $(function () {
   //  全局参数  
   var data = {
     cid: getParameter(location.search).cid,
-    pagenum: 1,
+    pagenum: 1,     
     pagesize: 10
   }
 
@@ -31,7 +32,7 @@ $(function () {
 
   //  下拉刷新和上拉加载
   mui.init({
-    //  swipeBack: false,
+     swipeBack: false,
     pullRefresh: {
       container: "#refreshContainer", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
       // down:说明这是下拉的初始化
@@ -43,7 +44,7 @@ $(function () {
         contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
         // 下面这个回调函数在下拉松开手指之后会触发
         callback: function () { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
-          data.pagenum = 1
+          data.pagenum = parseInt(Math.random() * 10)   //下拉刷新随机渲染内容,需要获取数据具体多少页
           renderMainData(function (result) {
             var html = template('goodlistTemp', result.data)
             $('.goodslist').html(html)
@@ -89,17 +90,18 @@ $(function () {
     }
     return obj
   }
-  // $('.query_btn').on('tap', function () {
-  //   // 展开运算符 + 对象解构
-  //   var obj = {}
-  //   obj.query = $('.query_txt').val()
-  //   renderMainData(function (result) {
-  //     console.log(result)
-  //     var html = template('searchListTemp', result.data)
-  //     $('.searchList').html(html)
-  //   }, obj)
-  // })
-
+  $('.query_btn').on('tap', function () {
+    // alert(11)
+    // 展开运算符 + 对象解构
+    var obj = {}
+    obj.query = $('.query_txt').val()
+    renderMainData(function (result) {
+      console.log(result)
+      var html = template('searchListTemp', result.data)
+      $('.searchList').html(html)
+    }, obj)
+  })
+  
 
 
 })

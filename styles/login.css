@@ -86,22 +86,18 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  box-sizing: border-box;
 }
 ol,
 ul {
   list-style: none;
 }
-/*清除浮动*/
-.clearfix::after {
+.clearfix::before {
+  content: " ";
   display: block;
-  visibility: hidden;
   clear: both;
-  content: ".";
+  visibility: hidden;
   height: 0;
-}
-.clearfix {
-  *zoom: 1;
+  font-size: 0;
 }
 .layout {
   width: 100vw;
@@ -111,23 +107,17 @@ ul {
   display: flex;
   flex-direction: column;
 }
-.pxg_header {
-  width: 100%;
+.pyg_header {
   height: 45px;
-  padding: 4px;
   background-color: #eee;
+  padding: 4px;
 }
-.pxg_main {
-  width: 100%;
+.pyg_content {
   flex: 1;
   overflow: scroll;
 }
-.pxg_footer {
-  width: 100%;
+.pyg_footer {
   height: 45px;
-}
-.pxg_footer .pxg_cat {
-  font-size: 12px;
 }
 .loadding::before {
   position: fixed;
@@ -146,55 +136,25 @@ ul {
   top: 40%;
   left: 50%;
   margin-left: -50px;
-  font-size: 80px;
-  color: #f00;
-  content: "\f004";
+  font-size: 100px;
+  color: #0094ff;
+  content: "\f013";
   z-index: 101;
   animation: fa-spin 1s infinite linear;
 }
-.pxg_main #header {
-  background-color: #0094ff;
+.line1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal!important;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
 }
-.pxg_main #header > a {
-  color: #fff;
-  font-weight: bold;
+.pyg_content {
+  overflow: hidden;
+  padding-top: 45px;
+  position: relative;
 }
-.pxg_main .goodslist > li {
-  background-color: #fff;
-  margin-bottom: 5px;
-}
-.pxg_main .goodslist > li > a {
-  display: flex;
-}
-.pxg_main .goodslist > li > a > div:nth-of-type(1) {
-  width: 45%;
-}
-.pxg_main .goodslist > li > a > div:nth-of-type(1) > img {
-  width: 70%;
-  margin: 0 auto;
-  display: block;
-}
-.pxg_main .goodslist > li > a > div:nth-of-type(2) {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-right: 5px;
-}
-.pxg_main .mui-scroll .searchBox {
-  display: flex;
-}
-.pxg_main .mui-scroll .searchBox .query_txt {
-  width: 80%;
-  margin-bottom: 0;
-}
-.pxg_main .mui-scroll .searchBox .query_btn {
-  background-color: #0094ff;
-  color: #fff;
-  flex: 1;
-}
-.pxg_main .mui-scroll .searchList > a {
-  display: block;
-  padding: 3px 0;
-  color: #fff;
+.pyg_content .mui-scroll-wrapper {
+  top: 45px;
+  bottom: 10px;
 }

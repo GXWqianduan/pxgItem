@@ -29,7 +29,7 @@
           <div class="mui-slider ">
             <!-- 轮播图片 -->
             <div class="mui-slider-group mui-slider-loop pyg_indexbanner">
-            
+              
             </div>
             <!-- 小圆点 -->
             <div class="mui-slider-indicator mui-text-center">
@@ -65,23 +65,24 @@
             <span class="mui-icon mui-icon-home"></span>
             <span class="mui-tab-label">首页</span>
           </a>
-          <a class="mui-tab-item" href="../views/category.html">
+          <a class="mui-tab-item  " href="./views/category.html">
             <span class="mui-icon mui-icon-list"></span>
             <span class="mui-tab-label">分类</span>
           </a>
-          <a class="mui-tab-item" href="#tabbar-with-contact">
+          <a class="mui-tab-item" href="./views/cart.html">
             <span class="mui-icon-extra mui-icon-extra-cart"></span>
             <div class="pxg_cat">
               <span class="mui-tab-label">购物车</span>
             </div>
           </a>
-          <a class="mui-tab-item" href="#tabbar-with-map">
+          <a class="mui-tab-item" href="./views/login.html">
             <span class="mui-icon mui-icon-contact"></span>
             <span class="mui-tab-label">我的</span>
           </a>
         </nav>
       </div>
   </div>
+  <!-- 轮播图 -->
   <script type="text/template" id='pyg_bannerTemp'>
           <div class="mui-slider-item mui-slider-item-duplicate"><a href="{{data[data.length-1].navigator_url}}"><img src="{{data[data.length-1].image_src}}" /></a></div>
           {{each data value index}}
@@ -102,7 +103,7 @@
             <img src="{{value.group_img}}" alt="">
             {{each value.goods v index}}
             <div class="pro_box">
-              <a href="javascript:;">
+              <a href="./views/pxg_proDetails.html?goods_id={{v.goods_id}}">
                 <img src="{{v.goods_small_logo}}" alt="">
                 <div class="pro_desc mui-ellipsis-2">{{v.goods_name}}</div>
                 <div class="pro_price">&yen; {{v.goods_price}}</div>

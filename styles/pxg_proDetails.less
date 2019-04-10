@@ -1,0 +1,119 @@
+@import '../styles/reset';
+@import '../styles/common.less';
+
+.layout {
+  .pxg_main {
+    position: relative;
+
+    .mui-scroll-wrapper {
+      top: 44px;
+      // bottom:60px;
+    }
+
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #fff;
+
+    .details {
+      width: 100%;
+      padding: 6px;
+
+      >p {
+        font-size: 14px;
+        color: #333;
+      }
+
+      >em {
+        display: inline-block;
+        padding-top: 10px;
+        font-size: 20px;
+        color: red;
+      }
+
+      >ul {
+        li {
+          display: flex;
+          border-bottom: 1px solid #333;
+          padding: 10px 0;
+
+          >em {
+            font-size: 14px;
+          }
+
+          >em:nth-of-type(1) {
+            color: #aaa;
+            flex: 1;
+          }
+
+          >em:nth-of-type(2) {
+            flex: 5;
+          }
+        }
+      }
+    }
+
+    .tab_bar {
+      #item2 {
+        li {
+          color: #aaa;
+          padding: 0 10px;
+
+          h4 {
+            border-bottom: 1px solid #333;
+            font-size: 16px;
+            line-height: 40px;
+          }
+
+          strong {
+            line-height: 30px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  // 底部样式
+  .pxg_footer {
+    width: 100%;
+    height: 45px;
+
+    .mui-bar {
+      .mui-tab-item {
+        >span:nth-child(2) {
+          font-size: 13px;
+        }
+      }
+    }
+
+    a:nth-of-type(-n+3) {
+      border-right: 1px solid #999;
+    }
+
+    a:nth-of-type(3) {
+      >input {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        color: #fff;
+        border:none;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    a:nth-of-type(4) {
+      >input {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        color: #fff;
+        border:none;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+}

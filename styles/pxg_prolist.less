@@ -1,47 +1,67 @@
 @import '../styles/reset';
 @import '../styles/common.less';
+
 .pxg_main {
-  // position: relative;
-  #header{
+  #header {
     background-color: #0094ff;
-    >a{
+
+    >a {
       color: #fff;
       font-weight: bold;
     }
   }
-  .goodslist{
-    >li{
-      background-color:#fff;
+
+  .goodslist {
+    >li {
+      background-color: #fff;
       margin-bottom: 5px;
-      >a{
+
+      >a {
         display: flex;
-        >div:nth-of-type(1){
+
+        >div:nth-of-type(1) {
           width: 45%;
-          >img{
+
+          >img {
             width: 70%;
             margin: 0 auto;
-           display: block;
+            display: block;
           }
         }
-        >div:nth-of-type(2){
+
+        >div:nth-of-type(2) {
           flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-         }
+          padding-right:5px;
+        }
       }
     }
   }
-  .searchBox{
-    display: flex;
-    .query_txt{
-      width: 80%;
-      margin-bottom:0;
+
+  .mui-scroll {
+    .searchBox {
+      display: flex;
+
+      .query_txt {
+        width: 80%;
+        margin-bottom: 0;
+      }
+
+      .query_btn {
+        background-color: #0094ff;
+        color: #fff;
+        flex: 1;
+      }
     }
-    .query_btn{
-      background-color: #0094ff;
-      color: #fff;
-      flex:1;
+    .searchList{
+      >a{
+        display:block;
+        padding: 3px 0;
+        color:#fff;
+      }
     }
   }
-}   
+
+}

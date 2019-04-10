@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../lib/mui/css/muie.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../styles/pxg_proDetails.css">
+  <title>商品详情</title>
+</head>
+
+<body>
+  <div class="layout">
+    <header id="header" class="mui-bar mui-bar-nav">
+      <h1 class="mui-title">商品详情</h1>
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="./category.html"></a>
+    </header>
+    <div class="pxg_main">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--区域滚动-->
+          <div class="pxg_banner">
+            <!-- 轮播图 -->
+          </div>
+          <!-- 详情部分 -->
+          <div class="details">
+            <p>海信(Hisense)LED55MU9600X3DUC 55英寸 4K超高清量子点电视 ULED画质 VIDAA系统</p>
+            <em>￥ 13999</em>
+            <ul>
+              <li>
+                <em>已选</em>
+                <em>白色</em>
+              </li>
+              <li>
+                <em>促销</em>
+                <em>是</em>
+              </li>
+              <li>
+                <em>地址</em>
+                <em>上海</em>
+              </li>
+              <li>
+                <em>运费</em>
+                <em>免运费</em>
+              </li>
+            </ul>
+          </div>
+          <!-- 图文详情 -->
+          <div class="tab_bar">
+            <div id="segmentedControl" class="mui-segmented-control">
+              <a class="mui-control-item mui-active" href="#item1">
+                图文详情
+              </a>
+              <a class="mui-control-item" href="#item2">
+                规格参数
+              </a>
+            </div>
+            <div class="protab">
+              <!-- 图文和规格 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <span class="pxg_footer">
+      <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item " href="javascript:;">
+          <span class="mui-icon mui-icon-weixin"></span>
+          <span class="mui-tab-label">客服</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="javascript:;">
+          <span class="mui-icon mui-icon-phone"></span>
+          <span class="mui-tab-label">联系</span>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-contact">
+          <input class="mui-tab-label" value="立即购买"></input>
+        </a>
+        <a class="mui-tab-item btn-addCart" href="#tabbar-with-map">
+          <input class="mui-tab-label" value="加入购物车"></input>
+        </a>
+      </nav>
+  </div>
+  </div>
+  <!-- 轮播图 -->
+  <script type="text/template" id="proDetails">
+         <div class="mui-slider ">
+                <!-- 轮播图片 -->
+                <div class="mui-slider-group mui-slider-loop pyg_indexbanner">
+                  <div class="mui-slider">
+                    <div class="mui-slider-group mui-slider-loop">
+                      <!--支持循环，需要重复图片节点-->
+                      <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img
+                            src="{{pics.length>0?pics[pics.length-1]:''}}" /></a></div>
+                          {{each pics value index}}
+                          <div class="mui-slider-item">
+                 <a href="#"><img src="{{value.pics_mid_url}}" /></a>
+                </div>
+                {{/each}}
+                      <!--支持循环，需要重复图片节点-->
+                      <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pics.length > 0 ?pics[0].pics_mid_url :''}}" /></a></div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                      {{each pics value index}}
+                      <div class="mui-indicator {{index==0?mui-active:''}}"></div>
+                     {{/each}}
+                    </div>
+                  </div>
+                </div>
+            </div>
+  </script>
+  <!-- 规格图文 -->
+  <script type="text/template" id="proSpecification">
+    <div id="item1" class="mui-control-content mui-active">
+              {{@goods_introduce}}
+    </div>
+   <div id="item2" class="mui-control-content">
+    {{each attrs value index}}
+      <ul>
+        <li>
+          <h4>{{value.attr_name.split('-')[0]}}</h4>
+          <strong>{{value.attr_name.split('-')[1]}}</strong>
+          <strong>{{value.attr_value}}</strong>
+        </li>
+      </ul>
+    {{/each}}
+     </div>
+  </script>
+  <script type="text/template" id="protext">
+
+
+  </script>
+
+  <script src="../lib/mui/js/mui.min.js"></script>
+  <script src="../lib/zepto/zepto.js"></script>
+  <script src="../lib/arttemplate/template-web.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pxg_proDetails.js"></script>
+</body>
+
+</html>
